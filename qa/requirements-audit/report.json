@@ -1,0 +1,221 @@
+{
+  "artifact": {
+    "id": "artifact-1",
+    "localPath": "D:\\wk\\joee-motion",
+    "metadata": {
+      "testArgs": [
+        "test"
+      ],
+      "testCommand": "npm",
+      "testMaxOutputBytes": 1048576,
+      "testTimeoutMs": 120000
+    },
+    "ownerScope": "user",
+    "privacy": "local",
+    "type": "code"
+  },
+  "brief": {
+    "acceptanceCriteria": [
+      "Creative planning changes narrative structure, composition, motion and art direction according to content rather than selecting a fixed skin",
+      "Text, PDF, PPTX, DOCX, web, image, audio and video inputs have usable ingestion paths",
+      "Images and videos can be uploaded, semantically analyzed, assigned and rendered with correct media components",
+      "The local voice command creates the exact audio artifact consumed by the renderer",
+      "Audio, subtitles and scene timing remain aligned after synthesis and revision",
+      "No reusable component contains airplane, banking or other topic-specific visual claims",
+      "Studio supports preview, asset upload, scene revision, render/export and download from the browser workflow",
+      "Preflight blocks missing or stale voice, missing assets, unsupported media, unverified claims and semantic mismatches",
+      "The system creates render manifests, provenance, QA evidence and deterministic outputs",
+      "Commercial visual and sound quality is not claimed before actual normal-speed human review"
+    ],
+    "audience": "A commercial creator expecting distinctive art direction and an end-to-end local production workflow.",
+    "constraints": [
+      "Do not render or synthesize media until the user explicitly authorizes a generation test",
+      "User assets require rights records and semantic matching",
+      "Reusable components must not contain topic-specific claims",
+      "A newly activated project must never inherit stale audio or media from another project"
+    ],
+    "domain": "code",
+    "goal": "Verify that JOEE Motion can produce genuinely content-specific, asset-aware, revisable Chinese motion videos instead of generic template swaps.",
+    "reviewDepth": "standard",
+    "targetGrade": "A",
+    "testCommand": {
+      "args": [
+        "test"
+      ],
+      "command": "npm",
+      "timeoutMs": 120000
+    }
+  },
+  "coverage": {
+    "applicable": 2,
+    "evaluated": 2,
+    "ratio": 1,
+    "threshold": 0.7
+  },
+  "criteria": [
+    {
+      "criterionId": "core.artifact-readable",
+      "evidenceIds": [
+        "ev-file"
+      ],
+      "reason": "交付物存在且可读取。",
+      "score": 10,
+      "status": "pass"
+    },
+    {
+      "criterionId": "code.tests-pass",
+      "evidenceIds": [
+        "ev-tests"
+      ],
+      "reason": "配置的真实测试命令执行成功。",
+      "score": 10,
+      "status": "pass"
+    }
+  ],
+  "dimensions": [
+    {
+      "confidence": 0,
+      "coverage": 0,
+      "criterionIds": [],
+      "dimension": "intent_fidelity",
+      "evidenceIds": [],
+      "reason": "当前评审没有该维度的适用检查项。",
+      "score": null
+    },
+    {
+      "confidence": 0,
+      "coverage": 0,
+      "criterionIds": [],
+      "dimension": "professional_craft",
+      "evidenceIds": [],
+      "reason": "当前评审没有该维度的适用检查项。",
+      "score": null
+    },
+    {
+      "confidence": 0,
+      "coverage": 0,
+      "criterionIds": [],
+      "dimension": "creative_judgment",
+      "evidenceIds": [],
+      "reason": "当前评审没有该维度的适用检查项。",
+      "score": null
+    },
+    {
+      "confidence": 0,
+      "coverage": 0,
+      "criterionIds": [],
+      "dimension": "coherent_experience",
+      "evidenceIds": [],
+      "reason": "当前评审没有该维度的适用检查项。",
+      "score": null
+    },
+    {
+      "confidence": 1,
+      "coverage": 1,
+      "criterionIds": [
+        "core.artifact-readable",
+        "code.tests-pass"
+      ],
+      "dimension": "reliability",
+      "evidenceIds": [
+        "ev-file",
+        "ev-tests"
+      ],
+      "reason": "按 2 个已评估检查项计算，分母为 2。",
+      "score": 10
+    },
+    {
+      "confidence": 0,
+      "coverage": 0,
+      "criterionIds": [],
+      "dimension": "critique_precision",
+      "evidenceIds": [],
+      "reason": "当前评审没有该维度的适用检查项。",
+      "score": null
+    }
+  ],
+  "evidence": [
+    {
+      "availability": "available",
+      "confidence": 1,
+      "id": "ev-file",
+      "kind": "direct_observation",
+      "locator": "D:\\wk\\joee-motion",
+      "notes": "type=directory extension= size=0",
+      "observedAt": "2026-10-22T00:36:36.595Z",
+      "source": "filesystem",
+      "tool": "node:fs"
+    },
+    {
+      "availability": "available",
+      "confidence": 1,
+      "id": "ev-tests",
+      "kind": "automated_test",
+      "locator": "command:npm test",
+      "notes": "exit=0 timeoutMs=120000 timedOut=false truncated=false\n\n> joee-motion@0.9.0 test\n> vitest run --dir tests\n\n\n RUN  v4.1.12 D:/wk/joee-motion\n\n\n Test Files  12 passed (12)\n      Tests  17 passed (17)\n   Start at  08:36:37\n   Duration  685ms (transform 508ms, setup 0ms, import 2.28s, tests 342ms, environment 2ms)\n\n",
+      "observedAt": "2026-10-22T00:36:37.898Z",
+      "source": "subprocess",
+      "tool": "npm"
+    }
+  ],
+  "findings": [],
+  "gates": [
+    {
+      "evidenceIds": [],
+      "gate": "brief",
+      "reason": "需要用户或专业评审证据。",
+      "reviewedAt": "2026-10-22T00:36:37.898Z",
+      "reviewerMode": "automated",
+      "status": "not_evaluated"
+    },
+    {
+      "evidenceIds": [],
+      "gate": "concept",
+      "reason": "需要用户或专业评审证据。",
+      "reviewedAt": "2026-10-22T00:36:37.898Z",
+      "reviewerMode": "automated",
+      "status": "not_evaluated"
+    },
+    {
+      "evidenceIds": [
+        "ev-file",
+        "ev-tests"
+      ],
+      "gate": "craft",
+      "reason": "已完成可用确定性检查。",
+      "reviewedAt": "2026-10-22T00:36:37.898Z",
+      "reviewerMode": "automated",
+      "status": "pass"
+    },
+    {
+      "evidenceIds": [],
+      "gate": "critique",
+      "reason": "未提供独立评审，标记为同一 Agent 二次检查模式。",
+      "reviewedAt": "2026-10-22T00:36:37.898Z",
+      "reviewerMode": "same_agent_second_pass",
+      "status": "not_evaluated"
+    },
+    {
+      "evidenceIds": [],
+      "gate": "acceptance",
+      "reason": "需要用户或专业评审证据。",
+      "reviewedAt": "2026-10-22T00:36:37.898Z",
+      "reviewerMode": "automated",
+      "status": "not_evaluated"
+    }
+  ],
+  "grade": null,
+  "limitations": [],
+  "overallStatus": "passed",
+  "repairPlan": [],
+  "reviewHistory": [
+    {
+      "action": "evaluate",
+      "at": "2026-10-22T00:36:37.898Z",
+      "reviewer": "joee-quality"
+    }
+  ],
+  "schemaVersion": "1.0.0",
+  "score": null,
+  "standardVersion": "0.1.0"
+}

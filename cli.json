@@ -1,0 +1,17 @@
+{
+  "runtime": {
+    "type": "node",
+    "version": "20"
+  },
+  "init": {
+    "darwin": "npm install -g github:joe194910/Joee-Motion",
+    "linux": "npm install -g github:joe194910/Joee-Motion",
+    "win32": "npm install -g github:joe194910/Joee-Motion"
+  },
+  "versionCheck": {
+    "darwin": "jm --version",
+    "linux": "jm --version",
+    "win32": "jm.cmd --version",
+    "minVersion": "1.0.0"
+  }
+}

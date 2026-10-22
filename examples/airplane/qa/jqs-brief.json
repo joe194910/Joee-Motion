@@ -1,0 +1,23 @@
+{
+  "goal": "Deliver a truthful, visually coherent two-minute Chinese knowledge explainer about why airplanes fly.",
+  "audience": "General Chinese-speaking viewers without an aeronautics background.",
+  "domain": "motion",
+  "constraints": ["1920x1080", "30fps", "2-5 minutes", "Chinese narration", "audio stream required", "no unlicensed media", "deterministic frames"],
+  "acceptanceCriteria": [
+    "Playable H.264 MP4 with AAC narration",
+    "At least four visibly distinct animation components",
+    "Stable validated storyboard scene IDs",
+    "Opening, hero moment, and ending are non-black and legible",
+    "SRT, provenance, editable source, manifest, and QA report are present",
+    "Automated findings are separated from human artistic review"
+  ],
+  "targetGrade": "B",
+  "requiresAudio": true,
+  "reviewDepth": "standard",
+  "motionChecks": {
+    "blackFrames": true,
+    "silence": true,
+    "keyframes": true,
+    "subtitlePath": "examples/airplane/subtitles.srt"
+  }
+}

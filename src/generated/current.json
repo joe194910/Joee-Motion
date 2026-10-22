@@ -1,0 +1,386 @@
+{
+  "version": "0.5.0",
+  "fps": 30,
+  "aspectRatio": "16:9",
+  "duration": 2700,
+  "scenes": [
+    {
+      "stableId": "S01-8ccb39",
+      "startFrame": 0,
+      "endFrame": 423,
+      "narrativeRole": "hook",
+      "conceptIds": [
+        "为什么",
+        "一条",
+        "信息",
+        "产生",
+        "不同",
+        "判断"
+      ],
+      "visualType": "QuestionReveal",
+      "componentId": "QuestionReveal",
+      "props": {
+        "text": "为什么同一条信息会让人产生不同判断？",
+        "displayText": "为什么同一条信息会让人产生不同判断",
+        "words": [
+          "为什么",
+          "一条",
+          "信息",
+          "产生",
+          "不同",
+          "判断"
+        ],
+        "parts": [
+          "为什么同一条信息会让人产生不同判断"
+        ],
+        "numbers": [],
+        "directionId": "editorial-evidence",
+        "palette": [
+          "#f3eee3",
+          "#1c2329",
+          "#309eb5",
+          "#81569f"
+        ],
+        "layout": "asymmetric-editorial",
+        "layoutVariant": "rail-left",
+        "surface": "paper",
+        "motion": "cut-and-annotate",
+        "typography": "serif-sans-contrast",
+        "heroMoment": false,
+        "sourceClaim": "为什么同一条信息会让人产生不同判断？",
+        "formatMode": "native-landscape"
+      },
+      "audioCueIds": [
+        "N1"
+      ],
+      "subtitleIds": [
+        "SUB1"
+      ],
+      "assetIds": [],
+      "riskFlags": []
+    },
+    {
+      "stableId": "S02-ad734e",
+      "startFrame": 423,
+      "endFrame": 940,
+      "narrativeRole": "evidence",
+      "conceptIds": [
+        "信息",
+        "来源",
+        "证据",
+        "强度",
+        "表达",
+        "方式",
+        "共同",
+        "影响"
+      ],
+      "visualType": "KineticTypography",
+      "componentId": "KineticTypography",
+      "props": {
+        "text": "信息来源、证据强度和表达方式共同影响可信度。",
+        "displayText": "信息来源、证据强度和表达方式共同影响可信度",
+        "words": [
+          "信息",
+          "来源",
+          "证据",
+          "强度",
+          "表达",
+          "方式",
+          "共同",
+          "影响"
+        ],
+        "parts": [
+          "信息来源",
+          "证据强度和表达方式共同影响可信度"
+        ],
+        "numbers": [],
+        "directionId": "editorial-evidence",
+        "palette": [
+          "#f3eee3",
+          "#1c2329",
+          "#309eb5",
+          "#81569f"
+        ],
+        "layout": "asymmetric-editorial",
+        "layoutVariant": "radial",
+        "surface": "paper",
+        "motion": "cut-and-annotate",
+        "typography": "serif-sans-contrast",
+        "heroMoment": false,
+        "sourceClaim": "信息来源、证据强度和表达方式共同影响可信度。",
+        "formatMode": "native-landscape"
+      },
+      "audioCueIds": [
+        "N2"
+      ],
+      "subtitleIds": [
+        "SUB2"
+      ],
+      "assetIds": [],
+      "riskFlags": []
+    },
+    {
+      "stableId": "S03-feb5c5",
+      "startFrame": 940,
+      "endFrame": 1269,
+      "narrativeRole": "evidence",
+      "conceptIds": [
+        "首先",
+        "区分",
+        "事实",
+        "解释",
+        "推测"
+      ],
+      "visualType": "EvidenceCard",
+      "componentId": "EvidenceCard",
+      "props": {
+        "text": "首先要区分事实、解释和推测。",
+        "displayText": "首先要区分事实、解释和推测",
+        "words": [
+          "首先",
+          "区分",
+          "事实",
+          "解释",
+          "推测"
+        ],
+        "parts": [
+          "首先要区分事实",
+          "解释和推测"
+        ],
+        "numbers": [],
+        "directionId": "editorial-evidence",
+        "palette": [
+          "#f3eee3",
+          "#1c2329",
+          "#309eb5",
+          "#81569f"
+        ],
+        "layout": "asymmetric-editorial",
+        "layoutVariant": "split-offset",
+        "surface": "paper",
+        "motion": "cut-and-annotate",
+        "typography": "serif-sans-contrast",
+        "heroMoment": false,
+        "sourceClaim": "首先要区分事实、解释和推测。",
+        "formatMode": "native-landscape"
+      },
+      "audioCueIds": [
+        "N3"
+      ],
+      "subtitleIds": [
+        "SUB3"
+      ],
+      "assetIds": [],
+      "riskFlags": []
+    },
+    {
+      "stableId": "S04-6c5dbc",
+      "startFrame": 1269,
+      "endFrame": 1645,
+      "narrativeRole": "hero",
+      "conceptIds": [
+        "然后",
+        "检查",
+        "原始",
+        "来源",
+        "是否",
+        "能够",
+        "复查"
+      ],
+      "visualType": "ProcessSteps",
+      "componentId": "ProcessSteps",
+      "props": {
+        "text": "然后检查原始来源是否能够被复查。",
+        "displayText": "然后检查原始来源是否能够被复查",
+        "words": [
+          "然后",
+          "检查",
+          "原始",
+          "来源",
+          "是否",
+          "能够",
+          "复查"
+        ],
+        "parts": [
+          "然后检查原始来源是否能够被复查"
+        ],
+        "numbers": [],
+        "directionId": "editorial-evidence",
+        "palette": [
+          "#f3eee3",
+          "#1c2329",
+          "#309eb5",
+          "#81569f"
+        ],
+        "layout": "asymmetric-editorial",
+        "layoutVariant": "split-offset",
+        "surface": "paper",
+        "motion": "cut-and-annotate",
+        "typography": "serif-sans-contrast",
+        "heroMoment": true,
+        "sourceClaim": "然后检查原始来源是否能够被复查。",
+        "formatMode": "native-landscape"
+      },
+      "audioCueIds": [
+        "N4"
+      ],
+      "subtitleIds": [
+        "SUB4"
+      ],
+      "assetIds": [],
+      "riskFlags": []
+    },
+    {
+      "stableId": "S05-fe5dae",
+      "startFrame": 1645,
+      "endFrame": 2091,
+      "narrativeRole": "evidence",
+      "conceptIds": [
+        "不同",
+        "来源",
+        "相互",
+        "印证",
+        "结论",
+        "更加",
+        "稳固"
+      ],
+      "visualType": "EvidenceCard",
+      "componentId": "EvidenceCard",
+      "props": {
+        "text": "不同来源相互印证时，结论才会更加稳固。",
+        "displayText": "不同来源相互印证时，结论才会更加稳固",
+        "words": [
+          "不同",
+          "来源",
+          "相互",
+          "印证",
+          "结论",
+          "更加",
+          "稳固"
+        ],
+        "parts": [
+          "不同来源相互印证时",
+          "结论才会更加稳固"
+        ],
+        "numbers": [],
+        "directionId": "editorial-evidence",
+        "palette": [
+          "#f3eee3",
+          "#1c2329",
+          "#309eb5",
+          "#81569f"
+        ],
+        "layout": "asymmetric-editorial",
+        "layoutVariant": "split-offset",
+        "surface": "paper",
+        "motion": "cut-and-annotate",
+        "typography": "serif-sans-contrast",
+        "heroMoment": false,
+        "sourceClaim": "不同来源相互印证时，结论才会更加稳固。",
+        "formatMode": "native-landscape"
+      },
+      "audioCueIds": [
+        "N5"
+      ],
+      "subtitleIds": [
+        "SUB5"
+      ],
+      "assetIds": [],
+      "riskFlags": []
+    },
+    {
+      "stableId": "S06-a6d309",
+      "startFrame": 2091,
+      "endFrame": 2700,
+      "narrativeRole": "summary",
+      "conceptIds": [
+        "最终",
+        "目标",
+        "不是",
+        "画面",
+        "显得",
+        "权威",
+        "而是",
+        "证据"
+      ],
+      "visualType": "SummaryCard",
+      "componentId": "SummaryCard",
+      "props": {
+        "text": "最终目标不是让画面显得权威，而是让证据关系清晰可见。",
+        "displayText": "最终目标不是让画面显得权威，而是让证据关系清晰可见",
+        "words": [
+          "最终",
+          "目标",
+          "不是",
+          "画面",
+          "显得",
+          "权威",
+          "而是",
+          "证据"
+        ],
+        "parts": [
+          "最终目标不是让画面显得权威",
+          "而是让证据关系清晰可见"
+        ],
+        "numbers": [],
+        "directionId": "editorial-evidence",
+        "palette": [
+          "#f3eee3",
+          "#1c2329",
+          "#309eb5",
+          "#81569f"
+        ],
+        "layout": "asymmetric-editorial",
+        "layoutVariant": "stacked-cards",
+        "surface": "paper",
+        "motion": "cut-and-annotate",
+        "typography": "serif-sans-contrast",
+        "heroMoment": false,
+        "sourceClaim": "最终目标不是让画面显得权威，而是让证据关系清晰可见。",
+        "formatMode": "native-landscape"
+      },
+      "audioCueIds": [
+        "N6"
+      ],
+      "subtitleIds": [
+        "SUB6"
+      ],
+      "assetIds": [],
+      "riskFlags": []
+    }
+  ],
+  "facts": [],
+  "assets": [],
+  "narrationSegments": [
+    {
+      "id": "N1",
+      "text": "为什么同一条信息会让人产生不同判断？",
+      "sceneId": "S01-8ccb39"
+    },
+    {
+      "id": "N2",
+      "text": "信息来源、证据强度和表达方式共同影响可信度。",
+      "sceneId": "S02-ad734e"
+    },
+    {
+      "id": "N3",
+      "text": "首先要区分事实、解释和推测。",
+      "sceneId": "S03-feb5c5"
+    },
+    {
+      "id": "N4",
+      "text": "然后检查原始来源是否能够被复查。",
+      "sceneId": "S04-6c5dbc"
+    },
+    {
+      "id": "N5",
+      "text": "不同来源相互印证时，结论才会更加稳固。",
+      "sceneId": "S05-fe5dae"
+    },
+    {
+      "id": "N6",
+      "text": "最终目标不是让画面显得权威，而是让证据关系清晰可见。",
+      "sceneId": "S06-a6d309"
+    }
+  ]
+}

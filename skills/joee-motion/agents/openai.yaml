@@ -1,0 +1,4 @@
+interface:
+  display_name: "JOEE Motion"
+  short_description: "根据内容和授权素材制作差异化动态视频"
+  default_prompt: "使用 $joee-motion，把我的文案和已授权素材制作成内容准确、视觉独立、可修改并可验收的动态视频项目。"

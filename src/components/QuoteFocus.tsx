@@ -1,0 +1,2 @@
+import React from 'react';import {interpolate,useCurrentFrame} from 'remotion';
+export const QuoteFocus:React.FC<{quote:string;accent:string}>=({quote,accent})=>{const f=useCurrentFrame(),p=interpolate(f,[0,28],[0,1],{extrapolateRight:'clamp'});return <div style={{position:'absolute',inset:'160px 210px',display:'flex',alignItems:'center',opacity:p}}><div style={{fontSize:190,color:accent,lineHeight:.5,alignSelf:'flex-start'}}>“</div><div style={{fontSize:72,lineHeight:1.4,fontWeight:650,padding:60}}>{quote}</div></div>};

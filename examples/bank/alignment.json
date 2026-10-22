@@ -1,0 +1,36 @@
+{
+  "method": "authored-scene-cues",
+  "precision": "scene-level",
+  "cues": [
+    {
+      "sceneId": "S01-688e3a",
+      "startFrame": 0,
+      "endFrame": 156
+    },
+    {
+      "sceneId": "S02-d9ca43",
+      "startFrame": 156,
+      "endFrame": 398
+    },
+    {
+      "sceneId": "S03-e2d5fe",
+      "startFrame": 398,
+      "endFrame": 601
+    },
+    {
+      "sceneId": "S04-db5e4d",
+      "startFrame": 601,
+      "endFrame": 804
+    },
+    {
+      "sceneId": "S05-c7216e",
+      "startFrame": 804,
+      "endFrame": 1171
+    },
+    {
+      "sceneId": "S06-41062d",
+      "startFrame": 1171,
+      "endFrame": 1350
+    }
+  ]
+}

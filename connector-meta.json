@@ -1,0 +1,22 @@
+{
+  "name": "JOEE Motion",
+  "name_zh": "JOEE Motion 动态视频",
+  "name_en": "JOEE Motion",
+  "description": "Create differentiated, auditable Remotion videos from documents and licensed media.",
+  "description_zh": "根据文案、文档和已授权素材制作差异化、可修改、可验收的 Remotion 动态视频。",
+  "description_en": "Create differentiated, editable and auditable Remotion videos from documents and licensed media.",
+  "source": "joee-motion",
+  "type": "cli",
+  "version": "1.0.0",
+  "minWorkbuddyVersion": "4.24.0",
+  "examples_zh": [
+    "把这份中文文案制作成具有独立视觉方向的知识视频",
+    "导入这些已授权图片并根据内容重新规划分镜",
+    "打开 JOEE Motion 制作台让我逐镜头检查"
+  ],
+  "examples_en": [
+    "Turn this script into a knowledge video with a distinct visual direction",
+    "Import these licensed images and re-plan the storyboard around the content",
+    "Open JOEE Motion Studio so I can review each scene"
+  ]
+}

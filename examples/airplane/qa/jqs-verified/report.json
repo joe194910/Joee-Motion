@@ -1,0 +1,356 @@
+{
+  "artifact": {
+    "hash": "ec97422ce022d185a8b25498ec8a4a70b116588b6cefe3400e0b643d666b6f12",
+    "id": "artifact-1",
+    "localPath": "D:\\wk\\joee-motion\\examples\\airplane\\out\\final.mp4",
+    "metadata": {
+      "evidenceDir": "D:\\wk\\joee-motion\\examples\\airplane\\qa\\jqs\\evidence"
+    },
+    "ownerScope": "user",
+    "privacy": "local",
+    "type": "motion"
+  },
+  "brief": {
+    "acceptanceCriteria": [
+      "Playable H.264 MP4 with AAC narration",
+      "At least four visibly distinct animation components",
+      "Stable validated storyboard scene IDs",
+      "Opening, hero moment, and ending are non-black and legible",
+      "SRT, provenance, editable source, manifest, and QA report are present",
+      "Automated findings are separated from human artistic review"
+    ],
+    "audience": "General Chinese-speaking viewers without an aeronautics background.",
+    "constraints": [
+      "1920x1080",
+      "30fps",
+      "2-5 minutes",
+      "Chinese narration",
+      "audio stream required",
+      "no unlicensed media",
+      "deterministic frames"
+    ],
+    "domain": "motion",
+    "goal": "Deliver a truthful, visually coherent two-minute Chinese knowledge explainer about why airplanes fly.",
+    "motionChecks": {
+      "blackFrames": true,
+      "keyframes": true,
+      "silence": true,
+      "subtitlePath": "examples/airplane/subtitles.srt"
+    },
+    "requiresAudio": true,
+    "reviewDepth": "standard",
+    "targetGrade": "B"
+  },
+  "coverage": {
+    "applicable": 7,
+    "evaluated": 7,
+    "ratio": 1,
+    "threshold": 0.7
+  },
+  "criteria": [
+    {
+      "criterionId": "core.artifact-readable",
+      "evidenceIds": [
+        "ev-file"
+      ],
+      "reason": "交付物存在且可读取。",
+      "score": 10,
+      "status": "pass"
+    },
+    {
+      "criterionId": "motion.video-stream",
+      "evidenceIds": [
+        "ev-ffprobe"
+      ],
+      "reason": "检测到视频流。",
+      "score": 10,
+      "status": "pass"
+    },
+    {
+      "criterionId": "motion.required-audio",
+      "evidenceIds": [
+        "ev-ffprobe"
+      ],
+      "reason": "检测到必需音频流。",
+      "score": 10,
+      "status": "pass"
+    },
+    {
+      "criterionId": "motion.black-frames",
+      "evidenceIds": [
+        "ev-blackdetect"
+      ],
+      "reason": "未发现达到阈值的黑帧区间。",
+      "score": 10,
+      "status": "pass"
+    },
+    {
+      "criterionId": "motion.silence",
+      "evidenceIds": [
+        "ev-silencedetect"
+      ],
+      "reason": "发现 1 个持续至少 2 秒的静音区间。",
+      "score": 6,
+      "status": "fail"
+    },
+    {
+      "criterionId": "motion.keyframe-samples",
+      "evidenceIds": [
+        "ev-keyframes"
+      ],
+      "reason": "已按时长 10%、50%、90% 抽取三张样本帧；抽样不能代表全部画面。",
+      "score": 10,
+      "status": "pass"
+    },
+    {
+      "criterionId": "motion.subtitle-timeline",
+      "evidenceIds": [
+        "ev-subtitles"
+      ],
+      "reason": "字幕时间轴未发现重叠、反向区间或超出媒体时长。",
+      "score": 10,
+      "status": "pass"
+    }
+  ],
+  "dimensions": [
+    {
+      "confidence": 1,
+      "coverage": 1,
+      "criterionIds": [
+        "motion.required-audio"
+      ],
+      "dimension": "intent_fidelity",
+      "evidenceIds": [
+        "ev-ffprobe"
+      ],
+      "reason": "按 1 个已评估检查项计算，分母为 1。",
+      "score": 10
+    },
+    {
+      "confidence": 1,
+      "coverage": 1,
+      "criterionIds": [
+        "motion.black-frames",
+        "motion.silence",
+        "motion.subtitle-timeline"
+      ],
+      "dimension": "professional_craft",
+      "evidenceIds": [
+        "ev-blackdetect",
+        "ev-silencedetect",
+        "ev-subtitles"
+      ],
+      "reason": "按 3 个已评估检查项计算，分母为 3。",
+      "score": 8.666666666666666
+    },
+    {
+      "confidence": 0,
+      "coverage": 0,
+      "criterionIds": [],
+      "dimension": "creative_judgment",
+      "evidenceIds": [],
+      "reason": "当前评审没有该维度的适用检查项。",
+      "score": null
+    },
+    {
+      "confidence": 0,
+      "coverage": 0,
+      "criterionIds": [],
+      "dimension": "coherent_experience",
+      "evidenceIds": [],
+      "reason": "当前评审没有该维度的适用检查项。",
+      "score": null
+    },
+    {
+      "confidence": 1,
+      "coverage": 1,
+      "criterionIds": [
+        "core.artifact-readable",
+        "motion.video-stream",
+        "motion.keyframe-samples"
+      ],
+      "dimension": "reliability",
+      "evidenceIds": [
+        "ev-file",
+        "ev-ffprobe",
+        "ev-keyframes"
+      ],
+      "reason": "按 3 个已评估检查项计算，分母为 3。",
+      "score": 10
+    },
+    {
+      "confidence": 0,
+      "coverage": 0,
+      "criterionIds": [],
+      "dimension": "critique_precision",
+      "evidenceIds": [],
+      "reason": "当前评审没有该维度的适用检查项。",
+      "score": null
+    }
+  ],
+  "evidence": [
+    {
+      "availability": "available",
+      "confidence": 1,
+      "id": "ev-file",
+      "kind": "direct_observation",
+      "locator": "D:\\wk\\joee-motion\\examples\\airplane\\out\\final.mp4",
+      "notes": "type=file extension=.mp4 size=11399344",
+      "observedAt": "2026-10-21T08:47:10.522Z",
+      "source": "filesystem",
+      "tool": "node:fs"
+    },
+    {
+      "availability": "available",
+      "confidence": 1,
+      "id": "ev-ffprobe",
+      "kind": "automated_test",
+      "locator": "D:\\wk\\joee-motion\\examples\\airplane\\out\\final.mp4",
+      "notes": "{\r\n    \"streams\": [\r\n        {\r\n            \"index\": 0,\r\n            \"codec_name\": \"h264\",\r\n            \"codec_long_name\": \"H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10\",\r\n            \"profile\": \"High\",\r\n            \"codec_type\": \"video\",\r\n            \"codec_tag_string\": \"avc1\",\r\n            \"codec_tag\": \"0x31637661\",\r\n            \"mime_codec_string\": \"avc1.640028\",\r\n            \"width\": 1920,\r\n            \"height\": 1080,\r\n            \"coded_width\": 1920,\r\n            \"coded_height\": 1080,\r\n            \"has_b_frames\": 2,\r\n            \"sample_aspect_ratio\": \"1:1\",\r\n            \"display_aspect_ratio\": \"16:9\",\r\n            \"pix_fmt\": \"yuvj420p\",\r\n            \"level\": 40,\r\n            \"color_range\": \"pc\",\r\n            \"color_space\": \"bt470bg\",\r\n            \"chroma_location\": \"center\",\r\n            \"field_order\": \"progressive\",\r\n            \"is_avc\": \"true\",\r\n            \"nal_length_size\": \"4\",\r\n            \"id\": \"0x1\",\r\n            \"r_frame_rate\": \"30/1\",\r\n            \"avg_frame_rate\": \"30/1\",\r\n            \"time_base\": \"1/90000\",\r\n            \"start_pts\": 0,\r\n            \"start_time\": \"0.000000\",\r\n            \"duration_ts\": 10800000,\r\n            \"duration\": \"120.000000\",\r\n            \"bit_rate\": \"433564\",\r\n            \"bits_per_raw_sample\": \"8\",\r\n            \"nb_frames\": \"3600\",\r\n            \"extradata_size\": 51,\r\n            \"disposition\": {\r\n                \"default\": 1,\r\n                \"dub\": 0,\r\n                \"original\": 0,\r\n                \"comment\": 0,\r\n                \"lyrics\": 0,\r\n                \"karaoke\": 0,\r\n                \"forced\": 0,\r\n                \"hearing_impaired\": 0,\r\n                \"visual_impaired\": 0,\r\n                \"clean_effects\": 0,\r\n                \"attached_pic\": 0,\r\n                \"timed_thumbnails\": 0,\r\n                \"non_diegetic\": 0,\r\n                \"captions\": 0,\r\n                \"descriptions\": 0,\r\n                \"metadata\": 0,\r\n                \"dependent\": 0,\r\n                \"still_image\": 0,\r\n                \"multilayer\": 0\r\n            },\r\n            \"tags\": {\r\n                \"language\": \"und\",\r\n                \"handler_name\": \"VideoHandler\"\r\n            },\r\n            \"side_data_list\": [\r\n                {\r\n                    \"side_data_type\": \"ICC Profile\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"index\": 1,\r\n            \"codec_name\": \"aac\",\r\n            \"codec_long_name\": \"AAC (Advanced Audio Coding)\",\r\n            \"profile\": \"LC\",\r\n            \"codec_type\": \"audio\",\r\n            \"codec_tag_string\": \"mp4a\",\r\n            \"codec_tag\": \"0x6134706d\",\r\n            \"mime_codec_string\": \"mp4a.40.2\",\r\n            \"sample_fmt\": \"fltp\",\r\n            \"sample_rate\": \"48000\",\r\n            \"channels\": 2,\r\n            \"channel_layout\": \"stereo\",\r\n            \"bits_per_sample\": 0,\r\n            \"initial_padding\": 2048,\r\n            \"id\": \"0x2\",\r\n            \"r_frame_rate\": \"0/0\",\r\n            \"avg_frame_rate\": \"0/0\",\r\n            \"time_base\": \"1/48000\",\r\n            \"start_pts\": 0,\r\n            \"start_time\": \"0.000000\",\r\n            \"duration_ts\": 5760000,\r\n            \"duration\": \"120.000000\",\r\n            \"bit_rate\": \"317374\",\r\n            \"nb_frames\": \"5627\",\r\n            \"extradata_size\": 2,\r\n            \"disposition\": {\r\n                \"default\": 1,\r\n                \"dub\": 0,\r\n                \"original\": 0,\r\n                \"comment\": 0,\r\n                \"lyrics\": 0,\r\n                \"karaoke\": 0,\r\n                \"forced\": 0,\r\n                \"hearing_impaired\": 0,\r\n                \"visual_impaired\": 0,\r\n                \"clean_effects\": 0,\r\n                \"attached_pic\": 0,\r\n                \"timed_thumbnails\": 0,\r\n                \"non_diegetic\": 0,\r\n                \"captions\": 0,\r\n                \"descriptions\": 0,\r\n                \"metadata\": 0,\r\n                \"dependent\": 0,\r\n                \"still_image\": 0,\r\n                \"multilayer\": 0\r\n            },\r\n            \"tags\": {\r\n                \"language\": \"und\",\r\n                \"handler_name\": \"SoundHandler\"\r\n            }\r\n        }\r\n    ],\r\n    \"format\": {\r\n        \"filename\": \"D:\\\\wk\\\\joee-motion\\\\examples\\\\airplane\\\\out\\\\final.mp4\",\r\n        \"nb_streams\": 2,\r\n        \"nb_programs\": 0,\r\n        \"nb_stream_groups\": 0,\r\n        \"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\",\r\n        \"format_long_name\": \"QuickTime / MOV\",\r\n        \"start_time\": \"0.000000\",\r\n        \"duration\": \"120.000000\",\r\n        \"size\": \"11399344\",\r\n        \"bit_rate\": \"759956\",\r\n        \"probe_score\": 100,\r\n        \"tags\": {\r\n            \"major_brand\": \"isom\",\r\n            \"minor_version\": \"512\",\r\n            \"compatible_brands\": \"isomiso2avc1mp41\",\r\n            \"encoder\": \"Lavf61.7.100\",\r\n            \"comment\": \"Made with Remotion 4.0.537\"\r\n        }\r\n    }\r\n}\r\n",
+      "observedAt": "2026-10-21T08:47:10.582Z",
+      "source": "ffprobe",
+      "tool": "ffprobe"
+    },
+    {
+      "availability": "available",
+      "confidence": 0.9,
+      "id": "ev-blackdetect",
+      "kind": "automated_test",
+      "locator": "D:\\wk\\joee-motion\\examples\\airplane\\out\\final.mp4",
+      "notes": "command=ffmpeg -hide_banner -nostats -i D:\\wk\\joee-motion\\examples\\airplane\\out\\final.mp4 -vf blackdetect=d=0.5:pix_th=0.10 -an -f null -\nranges=[]\nexit=0",
+      "observedAt": "2026-10-21T08:47:12.126Z",
+      "source": "ffmpeg blackdetect",
+      "tool": "ffmpeg"
+    },
+    {
+      "availability": "available",
+      "confidence": 0.85,
+      "id": "ev-silencedetect",
+      "kind": "automated_test",
+      "locator": "D:\\wk\\joee-motion\\examples\\airplane\\out\\final.mp4",
+      "notes": "command=ffmpeg -hide_banner -nostats -i D:\\wk\\joee-motion\\examples\\airplane\\out\\final.mp4 -af silencedetect=n=-50dB:d=2 -vn -f null -\nranges=[{\"start\":117.853521,\"end\":120,\"duration\":2.146479}]\nexit=0",
+      "observedAt": "2026-10-21T08:47:12.325Z",
+      "source": "ffmpeg silencedetect",
+      "tool": "ffmpeg"
+    },
+    {
+      "availability": "available",
+      "confidence": 0.8,
+      "id": "ev-keyframes",
+      "kind": "automated_test",
+      "locator": "D:\\wk\\joee-motion\\examples\\airplane\\qa\\jqs\\evidence",
+      "notes": "strategy=10%,50%,90% duration=120\nfiles=[\"D:\\\\wk\\\\joee-motion\\\\examples\\\\airplane\\\\qa\\\\jqs\\\\evidence\\\\frame-1.jpg\",\"D:\\\\wk\\\\joee-motion\\\\examples\\\\airplane\\\\qa\\\\jqs\\\\evidence\\\\frame-2.jpg\",\"D:\\\\wk\\\\joee-motion\\\\examples\\\\airplane\\\\qa\\\\jqs\\\\evidence\\\\frame-3.jpg\"]\nffmpeg -y -ss 12.000 -i D:\\wk\\joee-motion\\examples\\airplane\\out\\final.mp4 -frames:v 1 -q:v 2 D:\\wk\\joee-motion\\examples\\airplane\\qa\\jqs\\evidence\\frame-1.jpg exit=0\nffmpeg -y -ss 60.000 -i D:\\wk\\joee-motion\\examples\\airplane\\out\\final.mp4 -frames:v 1 -q:v 2 D:\\wk\\joee-motion\\examples\\airplane\\qa\\jqs\\evidence\\frame-2.jpg exit=0\nffmpeg -y -ss 108.000 -i D:\\wk\\joee-motion\\examples\\airplane\\out\\final.mp4 -frames:v 1 -q:v 2 D:\\wk\\joee-motion\\examples\\airplane\\qa\\jqs\\evidence\\frame-3.jpg exit=0",
+      "observedAt": "2026-10-21T08:47:12.886Z",
+      "source": "ffmpeg frame sampling",
+      "tool": "ffmpeg"
+    },
+    {
+      "availability": "available",
+      "confidence": 1,
+      "id": "ev-subtitles",
+      "kind": "automated_test",
+      "locator": "examples/airplane/subtitles.srt",
+      "notes": "{\"cueCount\":7,\"overlaps\":[],\"invalid\":[],\"overflow\":[]}",
+      "observedAt": "2026-10-21T08:47:12.887Z",
+      "source": "SRT parser",
+      "tool": "joee-quality"
+    }
+  ],
+  "findings": [
+    {
+      "confidence": 0.85,
+      "description": "发现 1 个持续至少 2 秒的静音区间；工具无法判断静音是否为创作意图。",
+      "dimension": "professional_craft",
+      "evidenceIds": [
+        "ev-silencedetect"
+      ],
+      "id": "f-silence",
+      "impact": "可能存在音轨缺口或异常停顿",
+      "recommendedFix": "人工试听对应区间，确认是设计留白还是音频缺失。",
+      "severity": "major",
+      "status": "open",
+      "title": "检测到长静音区间",
+      "verification": "试听并重新运行 silencedetect。"
+    }
+  ],
+  "gates": [
+    {
+      "evidenceIds": [],
+      "gate": "brief",
+      "reason": "需要用户或专业评审证据。",
+      "reviewedAt": "2026-10-21T08:47:12.887Z",
+      "reviewerMode": "automated",
+      "status": "not_evaluated"
+    },
+    {
+      "evidenceIds": [],
+      "gate": "concept",
+      "reason": "需要用户或专业评审证据。",
+      "reviewedAt": "2026-10-21T08:47:12.887Z",
+      "reviewerMode": "automated",
+      "status": "not_evaluated"
+    },
+    {
+      "evidenceIds": [
+        "ev-file",
+        "ev-ffprobe",
+        "ev-blackdetect",
+        "ev-silencedetect",
+        "ev-keyframes",
+        "ev-subtitles"
+      ],
+      "gate": "craft",
+      "reason": "已完成可用确定性检查。",
+      "reviewedAt": "2026-10-21T08:47:12.888Z",
+      "reviewerMode": "automated",
+      "status": "pass"
+    },
+    {
+      "evidenceIds": [],
+      "gate": "critique",
+      "reason": "未提供独立评审，标记为同一 Agent 二次检查模式。",
+      "reviewedAt": "2026-10-21T08:47:12.888Z",
+      "reviewerMode": "same_agent_second_pass",
+      "status": "not_evaluated"
+    },
+    {
+      "evidenceIds": [],
+      "gate": "acceptance",
+      "reason": "需要用户或专业评审证据。",
+      "reviewedAt": "2026-10-21T08:47:12.888Z",
+      "reviewerMode": "automated",
+      "status": "not_evaluated"
+    }
+  ],
+  "grade": null,
+  "limitations": [
+    "黑帧、静音和关键帧均为抽样或阈值检测，不能替代逐帧观看与人工试听。",
+    "未进行视觉高级感、叙事或声音美学判断。"
+  ],
+  "overallStatus": "needs_revision",
+  "repairPlan": [
+    {
+      "action": "人工试听对应区间，确认是设计留白还是音频缺失。",
+      "changeScope": "最小受影响范围",
+      "expectedEffect": "可能存在音轨缺口或异常停顿",
+      "findingIds": [
+        "f-silence"
+      ],
+      "owner": "artifact-owner",
+      "priority": "P1",
+      "risk": "修改后需回归相关验收项",
+      "status": "open",
+      "verifyBy": "试听并重新运行 silencedetect。"
+    }
+  ],
+  "reviewHistory": [
+    {
+      "action": "evaluate",
+      "at": "2026-10-21T08:47:12.888Z",
+      "reviewer": "joee-quality"
+    }
+  ],
+  "schemaVersion": "1.0.0",
+  "score": null,
+  "standardVersion": "0.1.0"
+}

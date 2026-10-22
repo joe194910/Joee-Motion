@@ -1,0 +1,2 @@
+import {describe,it,expect} from 'vitest'; import {readFileSync} from 'node:fs'; import {StoryboardSchema} from '../src/schemas';
+describe('storyboard schema',()=>{it('accepts airplane fixture',()=>{const x=StoryboardSchema.parse(JSON.parse(readFileSync('examples/airplane/storyboard.json','utf8')));expect(x.scenes.length).toBeGreaterThanOrEqual(4)});it('rejects overlapping scenes',()=>{const base=JSON.parse(readFileSync('examples/airplane/storyboard.json','utf8'));base.scenes[1].startFrame=1;expect(()=>StoryboardSchema.parse(base)).toThrow()})});

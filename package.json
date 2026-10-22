@@ -1,0 +1,59 @@
+{
+  "name": "joee-motion",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "内容驱动、可审计、可修改的 Remotion 动态视频制作 CLI 与 Agent Skill",
+  "keywords": ["agent-skill", "remotion", "motion-graphics", "video", "workbuddy", "codex", "claude", "cursor"],
+  "homepage": "https://github.com/joe194910/Joee-Motion#readme",
+  "repository": {"type": "git", "url": "git+https://github.com/joe194910/Joee-Motion.git"},
+  "bugs": {"url": "https://github.com/joe194910/Joee-Motion/issues"},
+  "engines": {"node": ">=20"},
+  "files": [
+    "bin",
+    "src",
+    "scripts",
+    "skills",
+    "remotion.config.ts",
+    ".env.example",
+    "LICENSE",
+    "README.md",
+    "THIRD_PARTY.md",
+    "connector-meta.json",
+    "cli.json",
+    "icon.svg"
+  ],
+  "publishConfig": {"access": "public"},
+  "bin": {
+    "jm": "bin/jm.js"
+  },
+  "scripts": {
+    "prebuild": "node scripts/clean-dist.mjs",
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run --dir tests",
+    "doctor": "tsx src/cli/index.ts doctor",
+    "studio": "tsx scripts/studio.ts",
+    "studio:no-open": "tsx scripts/studio.ts --no-open",
+    "render": "tsx src/cli/index.ts render examples/airplane",
+    "check": "tsx src/cli/index.ts check examples/airplane"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.370",
+    "@remotion/media-utils": "^4.0.370",
+    "commander": "^14.0.1",
+    "jszip": "^3.10.2",
+    "pdfjs-dist": "^6.4.299",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "remotion": "^4.0.370",
+    "tsx": "^4.20.6",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.3"
+  }
+}

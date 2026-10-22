@@ -1,0 +1,24 @@
+{
+  "version":"0.1.0","fps":30,"aspectRatio":"16:9","duration":3600,
+  "facts":[
+    {"id":"F01","claim":"Lift is associated with pressure distribution and downward change in airflow momentum.","source":"NASA Glenn: Beginner's Guide to Aeronautics"},
+    {"id":"F02","claim":"The equal-transit-time explanation is not a valid general explanation of lift.","source":"NASA Glenn: Incorrect Lift Theory"}
+  ],"assets":[],"narrationSegments":[
+    {"id":"N01","text":"为什么飞机能够飞起来？","sceneId":"S01-question"},
+    {"id":"N02","text":"空气不是背景，而是参与作用的介质。","sceneId":"S02-air"},
+    {"id":"N03","text":"上下表面空气必须同时到达并不是正确的一般解释。","sceneId":"S03-myth"},
+    {"id":"N04","text":"机翼改变周围流场、压力分布和空气动量。","sceneId":"S04-flow"},
+    {"id":"N05","text":"空气整体向下偏转时，机翼获得向上的作用。","sceneId":"S05-hero"},
+    {"id":"N06","text":"飞行还取决于升力、重力、推力和阻力的关系。","sceneId":"S06-forces"},
+    {"id":"N07","text":"形状、迎角和速度共同影响升力。","sceneId":"S07-summary"}
+  ],
+  "scenes":[
+    {"stableId":"S01-question","startFrame":0,"endFrame":420,"narrativeRole":"hook","conceptIds":["lift"],"visualType":"question","componentId":"QuestionReveal","props":{},"audioCueIds":["N01"],"subtitleIds":["SUB01"],"assetIds":[],"riskFlags":[]},
+    {"stableId":"S02-air","startFrame":420,"endFrame":870,"narrativeRole":"reframe","conceptIds":["airflow"],"visualType":"typography","componentId":"KineticTypography","props":{},"audioCueIds":["N02"],"subtitleIds":["SUB02"],"assetIds":[],"riskFlags":[]},
+    {"stableId":"S03-myth","startFrame":870,"endFrame":1410,"narrativeRole":"misconception","conceptIds":["equal-transit"],"visualType":"comparison","componentId":"ComparisonSplit","props":{},"audioCueIds":["N03"],"subtitleIds":["SUB03"],"assetIds":[],"riskFlags":["scientific-accuracy"]},
+    {"stableId":"S04-flow","startFrame":1410,"endFrame":2070,"narrativeRole":"mechanism","conceptIds":["pressure","momentum"],"visualType":"mechanism-diagram","componentId":"MechanismFlow","props":{},"audioCueIds":["N04"],"subtitleIds":["SUB04"],"assetIds":[],"riskFlags":["scientific-schematic"]},
+    {"stableId":"S05-hero","startFrame":2070,"endFrame":2640,"narrativeRole":"hero","conceptIds":["lift-build"],"visualType":"mechanism-diagram","componentId":"MechanismFlow","props":{"hero":true},"audioCueIds":["N05"],"subtitleIds":["SUB05"],"assetIds":[],"riskFlags":["scientific-schematic"]},
+    {"stableId":"S06-forces","startFrame":2640,"endFrame":3120,"narrativeRole":"synthesis","conceptIds":["four-forces"],"visualType":"force-diagram","componentId":"ForceBalance","props":{},"audioCueIds":["N06"],"subtitleIds":["SUB06"],"assetIds":[],"riskFlags":[]},
+    {"stableId":"S07-summary","startFrame":3120,"endFrame":3600,"narrativeRole":"summary","conceptIds":["lift"],"visualType":"typography","componentId":"KineticTypography","props":{},"audioCueIds":["N07"],"subtitleIds":["SUB07"],"assetIds":[],"riskFlags":[]}
+  ]
+}

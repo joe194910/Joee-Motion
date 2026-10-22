@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-10-21T09:13:52.609Z",
+  "status": "pass",
+  "checks": {
+    "storyboard": "pass",
+    "sceneCount": 6,
+    "video": "pass",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_type": "audio",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "45.013000"
+      }
+    },
+    "jqs": "not_evaluated"
+  },
+  "limitations": [
+    "Automated checks do not replace full-speed human review."
+  ]
+}

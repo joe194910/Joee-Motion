@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.cache/
+projects/
+out/*.mp4
+examples/*/out/*.mp4
+examples/*/audio/*.wav
+examples/*/qa/**/*.jpg
+examples/*/qa/**/*.png
+public/audio/*.wav
+joee-motion-*.tgz

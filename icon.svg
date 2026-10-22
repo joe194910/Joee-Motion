@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">JOEE Motion</title>
+  <defs>
+    <linearGradient id="g" x1="48" y1="40" x2="464" y2="472" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C5CFF"/>
+      <stop offset="1" stop-color="#15D1C5"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#0A0B10"/>
+  <path d="M118 126h98v182c0 57-34 91-91 91-18 0-34-3-49-10l18-65c8 3 16 5 24 5 21 0 31-13 31-38V196h-31v-70Z" fill="url(#g)"/>
+  <path d="M250 126h144v70h-77v35h68v67h-68v31h80v70H250V126Z" fill="#F5F7FF"/>
+  <circle cx="420" cy="110" r="35" fill="#FFCB45"/>
+</svg>

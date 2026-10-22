@@ -1,0 +1,30 @@
+{
+  "goal": "Verify that JOEE Motion can produce genuinely content-specific, asset-aware, revisable Chinese motion videos instead of generic template swaps.",
+  "audience": "A commercial creator expecting distinctive art direction and an end-to-end local production workflow.",
+  "domain": "code",
+  "constraints": [
+    "Do not render or synthesize media until the user explicitly authorizes a generation test",
+    "User assets require rights records and semantic matching",
+    "Reusable components must not contain topic-specific claims",
+    "A newly activated project must never inherit stale audio or media from another project"
+  ],
+  "acceptanceCriteria": [
+    "Creative planning changes narrative structure, composition, motion and art direction according to content rather than selecting a fixed skin",
+    "Text, PDF, PPTX, DOCX, web, image, audio and video inputs have usable ingestion paths",
+    "Images and videos can be uploaded, semantically analyzed, assigned and rendered with correct media components",
+    "The local voice command creates the exact audio artifact consumed by the renderer",
+    "Audio, subtitles and scene timing remain aligned after synthesis and revision",
+    "No reusable component contains airplane, banking or other topic-specific visual claims",
+    "Studio supports preview, asset upload, scene revision, render/export and download from the browser workflow",
+    "Preflight blocks missing or stale voice, missing assets, unsupported media, unverified claims and semantic mismatches",
+    "The system creates render manifests, provenance, QA evidence and deterministic outputs",
+    "Commercial visual and sound quality is not claimed before actual normal-speed human review"
+  ],
+  "targetGrade": "A",
+  "reviewDepth": "standard",
+  "testCommand": {
+    "command": "npm",
+    "args": ["test"],
+    "timeoutMs": 120000
+  }
+}

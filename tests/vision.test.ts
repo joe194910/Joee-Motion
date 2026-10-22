@@ -1,0 +1,2 @@
+import {describe,it,expect} from 'vitest';import {analyzeImageOpenAI,analyzeVideoOpenAI} from '../src/ingest/vision';
+describe('vision cost guard',()=>{it('blocks image analysis without explicit cost confirmation',async()=>{await expect(analyzeImageOpenAI('missing.png','example-model',false)).rejects.toThrow('confirm-cost')});it('blocks video frame analysis without explicit cost confirmation',async()=>{await expect(analyzeVideoOpenAI('missing.mp4','example-model',false)).rejects.toThrow('confirm-cost')})});

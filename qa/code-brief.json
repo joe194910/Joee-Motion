@@ -1,0 +1,10 @@
+{
+  "goal": "Prevent generic template swapping, semantic mismatches, and topic-hardcoded components in JOEE Motion planning and rendering.",
+  "audience": "Motion directors and developers using the skill for content-driven video projects.",
+  "domain": "code",
+  "constraints": ["No video rendering during this development phase", "Deterministic planning", "UTF-8 safe", "Asset rights recorded"],
+  "acceptanceCriteria": ["TypeScript build passes", "Unit tests pass", "Hardcoded topic components are removed or blocked", "Multi-format ingestion exists", "Assets carry rights and Scene IDs", "Creative directions differ structurally", "Risky claims require sources", "Skill folder validates", "No video is generated during development"],
+  "targetGrade": "B",
+  "reviewDepth": "standard",
+  "testCommand": {"command": "npm", "args": ["test"], "timeoutMs": 120000}
+}
