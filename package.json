@@ -1,6 +1,6 @@
 {
   "name": "joee-motion",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "license": "MIT",
   "description": "内容驱动、可审计、可修改的 Remotion 动态视频制作 CLI 与 Agent Skill",

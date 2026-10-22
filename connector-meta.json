@@ -7,7 +7,7 @@
   "description_en": "Create differentiated, editable and auditable Remotion videos from documents and licensed media.",
   "source": "joee-motion",
   "type": "cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "minWorkbuddyVersion": "4.24.0",
   "examples_zh": [
     "把这份中文文案制作成具有独立视觉方向的知识视频",

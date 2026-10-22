@@ -12,6 +12,6 @@
     "darwin": "jm --version",
     "linux": "jm --version",
     "win32": "jm.cmd --version",
-    "minVersion": "1.0.0"
+    "minVersion": "1.1.0"
   }
 }

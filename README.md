@@ -1,8 +1,8 @@
-# JOEE Motion V1.0
+# JOEE Motion V1.1
 
 JOEE Motion 是一个面向中文知识讲解与视觉叙事的视频制作系统。它将内容解析、事实核查、创意方向、素材权利、分镜语义、音频时间轴、Remotion 渲染和质量验收拆分为可检查、可修改、可恢复的生产步骤。
 
-当前 V1.0 已完成静态开发和生产链代码实现，但尚未执行用户授权的端到端媒体生成测试。在真实视频经过正常速度观看和人工审片之前，不得将本项目描述为“已达到商用验收标准”。
+V1.1 针对“换字模板、全片卡片、中文数字丢失、图片只作装饰”等问题重构了规划与画面系统：新增内容关系驱动的全画幅视觉语法、中文数量解析、AI 关键视觉规划、生成来源记录和卡片占比门禁。当前代码已经过静态构建和自动化测试；在用户授权真实渲染、正常速度观看和人工审片之前，商业审美仍标记为 `not_evaluated`。
 
 ## 安装
 
@@ -125,7 +125,7 @@ npx tsx src/cli/index.ts init projects/my-film
 # 导入 PDF、PPTX、DOCX、网页或文本资料
 npx tsx src/cli/index.ts ingest projects/my-film ./source.pdf
 
-# 根据输入内容生成创意方向、分镜、口播稿和字幕草案
+# 根据输入内容生成创意方向、分镜、口播稿、字幕草案和 visual-assets.json
 npx tsx src/cli/index.ts plan projects/my-film --input projects/my-film/input.md --duration 180 --aspect 16:9
 
 # 可选：显式确认费用后，让外部模型重构视觉方向和场景设计；不会改写口播、事实和数字
@@ -133,6 +133,12 @@ npx tsx src/cli/index.ts creative-enhance projects/my-film --model YOUR_MODEL --
 
 # 导入用户拥有或已经取得授权的图片、视频、音频及文档素材
 npx tsx src/cli/index.ts asset-add projects/my-film ./owned-image.png --license "用户自有" --usage "用于解释核心机制"
+
+# AI 工具生成图片后，记录提供方、模型和完整提示词
+npx tsx src/cli/index.ts asset-add projects/my-film ./generated-key-visual.png --license "AI 生成，允许用于本项目" --usage "建立核心场景的真实空间与主体" --provider "图像提供方" --model "模型名称" --prompt "生成时使用的完整提示词"
+
+# 将生成图片作为全画幅动态关键视觉绑定，而不是塞进卡片
+npx tsx src/cli/index.ts asset-bind projects/my-film --asset A-... --scene S02-context --mode cinematic
 
 # 使用明确指定的模型分析图片；该命令需要 API Key，并且必须显式确认费用
 npx tsx src/cli/index.ts asset-analyze projects/my-film --asset A-... --provider openai --model YOUR_VISION_MODEL --confirm-cost
@@ -165,6 +171,12 @@ npx tsx src/cli/index.ts preflight projects/my-film
 - 视频元数据、代表帧提取与经授权的 AI 语义分析
 
 为降低服务端请求伪造风险，网页导入会阻止本机地址和私有网络地址。
+
+### AI 图片如何进入影片
+
+`plan` 会生成 `visual-assets.json`，逐场说明哪些内容适合程序化动态图形，哪些场景建议生成图片，并给出延续本片视觉母题的提示词。公式、税率阶梯、计算过程、机制和数据关系默认由代码直接动画化；只有需要人物、地点、物件、真实情境或空间纵深的场景才建议生成图片。
+
+安装在 WorkBuddy、Codex 或其他 AI 工具中的 Skill 会读取这份计划，并在工具具备图像生成能力且用户已授权时生成所需图片。CLI 本身不在渲染期间联网取图。图片导入后必须记录生成来源，再使用 `--mode cinematic` 以全画幅推拉、遮罩或视差方式运动；不得把图片缩进统一卡框，也不得在图片中烘焙文字、数字、Logo 或水印。
 
 ## 用户授权后的媒体生成工作流
 
@@ -225,13 +237,17 @@ npm run studio:no-open
 - 导入时间
 - 关联场景 ID
 - 分析状态
+- AI 生成提供方、模型、完整提示词和生成时间（仅生成素材）
 
 公开可见不等于可以合法复用。缺少明确权利说明的素材不应进入最终视频。
 
 手动绑定素材与场景：
 
 ```powershell
-npx tsx src/cli/index.ts asset-bind projects/my-film --asset A-... --scene S03-example
+npx tsx src/cli/index.ts asset-bind projects/my-film --asset A-... --scene S03-example --mode evidence
+
+# AI 生成图或自有关键视觉使用全画幅电影化模式
+npx tsx src/cli/index.ts asset-bind projects/my-film --asset A-... --scene S03-example --mode cinematic
 ```
 
 ## 事实来源
@@ -294,6 +310,8 @@ npx tsx src/cli/index.ts patterns projects/my-film
 - 每个项目必须具有与内容相关的视觉论点，不能只替换模板文字。
 - 在用户没有指定视觉方向时，至少生成两个结构上有明显差异的候选方向。
 - 每支视频只能有一个明确设计的 Hero Moment（核心记忆镜头）。
+- 卡片式场景不得超过总场景数的四分之一；数据、公式、流程、对比和结论必须优先采用与内容关系对应的空间视觉语法。
+- 不得显示场景 ID、方向 ID 或“原有认知 / 关键转变”等未来自原稿的模板标签。
 - 可见文字和画面表达必须与对应口播语义一致。
 - 可复用组件中不得写死特定行业、主题、数据或结论。
 - 所有导入素材必须记录权利、哈希、用途和场景关联。
@@ -310,6 +328,7 @@ npx tsx src/cli/index.ts patterns projects/my-film
 - `creative-directions.json`：候选创意方向
 - `treatment.json` / `treatment.md`：导演处理方案
 - `storyboard.json`：经过 Schema 验证的分镜
+- `visual-assets.json`：程序化画面与 AI 关键视觉的逐场规划、提示词和连续性要求
 - `narration.txt`：口播稿
 - `alignment.json`：音频与场景对齐信息
 - `subtitles.srt`：字幕文件
@@ -340,7 +359,7 @@ npx tsx src/cli/index.ts preflight projects/my-film
 
 ## 已知限制
 
-- 外部 AI 图片分析需要显式指定模型、API Key，并确认可能产生的费用。
+- 外部 AI 图片生成与分析由宿主 AI 工具或显式配置的提供方执行；可能产生费用时必须先获得用户授权。
 - 当前对齐能力是基于实际音频片段时长的句段级对齐，不宣称具备逐字强制对齐能力。
 - 图片和视频视觉分析需要显式配置外部模型；音频内容分析仍依赖用户提供文本或后续转写适配器。
 - 关键词 cue 是依据实测句段边界计算的估算位置，不伪装成逐字强制对齐结果，正式成片仍需试听校准。
