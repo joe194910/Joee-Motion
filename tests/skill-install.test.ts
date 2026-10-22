@@ -18,6 +18,7 @@ describe('Agent Skill 安装器', () => {
     expect(result.installed).toEqual([join(root, 'joee-motion')]);
     expect(existsSync(skill)).toBe(true);
     expect(readFileSync(skill, 'utf8')).toContain('name: joee-motion');
+    expect(existsSync(join(root, 'joee-motion', 'bin', 'jm.mjs'))).toBe(true);
   });
 
   it('默认不覆盖已有 Skill', () => {

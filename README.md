@@ -6,7 +6,23 @@ JOEE Motion 是一个面向中文知识讲解与视觉叙事的视频制作系�
 
 ## 安装
 
-### 从 GitHub 安装 CLI（现在即可使用）
+### 方式一：直接告诉你的 AI（推荐）
+
+把下面这句话发给 WorkBuddy、Codex、Claude Code、Cursor 或其他支持 Agent Skills 的 AI：
+
+```text
+帮我安装 joee-motion 这个 skill（github.com/joe194910/Joee-Motion），装好后运行一次 doctor 检查。不要生成视频，等我提供素材。
+```
+
+AI 会运行标准 Skills 安装器：
+
+```powershell
+npx skills add joe194910/Joee-Motion
+```
+
+Skill 内置 `bin/jm.mjs` 自举启动器：克隆完整仓库时直接使用仓库里的 CLI；仅安装 Skill 时自动通过 GitHub npm 包运行 CLI。因此不需要先下载压缩包，也不要求预先全局安装 `jm`。
+
+### 方式二：从 GitHub 安装 CLI
 
 ```powershell
 # 全局安装后会提供 jm 命令
@@ -32,13 +48,13 @@ npm install -g joee-motion
 
 要求 Node.js 20 或更高版本。渲染和媒体检查还需要 FFmpeg、FFprobe 与 Google Chrome。
 
-### 安装到 WorkBuddy
+### WorkBuddy Connector（可选）
 
 仓库根目录已经包含 WorkBuddy CLI Connector 所需的 `connector-meta.json`、`cli.json`、`icon.svg` 和 `skills/joee-motion/SKILL.md`。在 WorkBuddy 中导入该连接器目录或其 ZIP 包后，WorkBuddy 会使用托管的 Node.js 20 环境自动执行 GitHub npm 安装，不需要污染系统级 npm 目录。
 
 连接器启用后，可直接用自然语言要求 WorkBuddy 创建项目、导入资料、规划视频或打开制作台。`jm preview <项目目录>` 会启动 JOEE Motion 制作台和 Remotion Studio，并自动打开 Google Chrome。
 
-### 安装到其他 AI 编程工具
+### 方式三：手动指定 AI 工具
 
 先安装 CLI，再按目标工具安装同一份标准 Agent Skill：
 
