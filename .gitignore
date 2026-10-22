@@ -3,6 +3,8 @@ dist/
 .cache/
 projects/
 out/*.mp4
+out/*.zip
+out/installers/
 examples/*/out/*.mp4
 examples/*/audio/*.wav
 examples/*/qa/**/*.jpg
